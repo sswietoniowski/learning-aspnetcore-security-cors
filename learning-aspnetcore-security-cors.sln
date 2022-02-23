@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfiguringCors.WebAPI", "ConfiguringCors.WebAPI\ConfiguringCors.WebAPI.csproj", "{365A5320-FF62-4065-B040-40DC28C07CC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfiguringCors.WebAPI", "ConfiguringCors.WebAPI\ConfiguringCors.WebAPI.csproj", "{365A5320-FF62-4065-B040-40DC28C07CC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfiguringCors.MVC", "ConfiguringCors.MVC\ConfiguringCors.MVC.csproj", "{9757428A-4B10-42A1-969D-028032730B76}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfiguringCors.RazorPages", "ConfiguringCors.RazorPages\ConfiguringCors.RazorPages.csproj", "{D11283B0-8480-4C1A-A670-96BB7CB52052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfiguringCors.MVC", "ConfiguringCors.MVC\ConfiguringCors.MVC.csproj", "{9757428A-4B10-42A1-969D-028032730B76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{9757428A-4B10-42A1-969D-028032730B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9757428A-4B10-42A1-969D-028032730B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9757428A-4B10-42A1-969D-028032730B76}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D11283B0-8480-4C1A-A670-96BB7CB52052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D11283B0-8480-4C1A-A670-96BB7CB52052}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D11283B0-8480-4C1A-A670-96BB7CB52052}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D11283B0-8480-4C1A-A670-96BB7CB52052}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
