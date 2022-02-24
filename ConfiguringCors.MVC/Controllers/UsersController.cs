@@ -3,29 +3,31 @@ using ConfiguringCors.Application.Contracts.Infrastructure;
 using ConfiguringCors.Application.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ConfiguringCors.WebAPI.Controllers
+namespace ConfiguringCors.MVC.Controllers
 {
-    [Route("api/nocors")]
-    [ApiController]
-    public class NoCorsController : ControllerBase
+    public class UsersController : Controller
     {
         private const int _DEFAULT_USERS_QUANTITY = 10;
 
         private readonly IUsersService _usersService;
         private readonly IMapper _mapper;
 
-        public NoCorsController(IMapper mapper, IUsersService usersService)
+        public UsersController(IMapper mapper, IUsersService usersService)
         {
             _mapper = mapper;
             _usersService = usersService;
         }
+
+        #region API_CALLS
 
         [HttpGet]
         public ActionResult<IEnumerable<UserDto>> GetAll([FromQuery] int quantity = _DEFAULT_USERS_QUANTITY)
         {
             var users = _usersService.GetAll().Take(quantity);
             var usersDto = _mapper.Map<IEnumerable<UserDto>>(users);
-            return Ok(usersDto);
+            return Json(usersDto);
         }
+
+        #endregion
     }
 }

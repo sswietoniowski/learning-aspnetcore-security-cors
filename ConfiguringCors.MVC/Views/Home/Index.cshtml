@@ -2,19 +2,17 @@
     ViewData["Title"] = "Cors Demo";
 }
 
-<div class="row">
-    <div class="col-12">
-        <form class="form-inline">
-            <button class="btn btn-primary" onclick="loadProducts()">Load Products</button>
-        </form>
+<div class="container">
+    <div class="btn-group" role="group" aria-label="Cors Buttons">
+        <button class="btn btn-secondary" onclick="loadUsers('https://localhost:5003/Users/GetAll')">Load Users (SOP)</button>
+        <button class="btn btn-secondary" onclick="loadUsers('https://localhost:5001/api/users/cors-disabled')">Load Users (CORS-Disabled)</button>
+        <button class="btn btn-secondary" onclick="loadUsers('https://localhost:5001/api/users/cors-enabled-allow-any-origin')">Load Users (CORS-Enabled)</button>
+    </div>
+    <br />
+    <div class="card-group" id="users-list">
     </div>
 </div>
-<div class="row">
-    <div class="col-12">
-        <div id="product-list" class="card-deck">
-        </div>
-    </div>
-</div>
+
 @section Scripts {
-<script src="~/js/products.js"></script>
+<script src="~/js/users.js"></script>
 }
