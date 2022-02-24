@@ -15,7 +15,11 @@
 }
 
 const loadProducts = async () => {
-    const response = await fetch('https://localhost:5001/api/products');
-    const products = await response.json();
-    createListWithInnerHtml(products)
+    try {
+        const response = await fetch('https://localhost:5001/api/products');
+        const products = await response.json();
+        createListWithInnerHtml(products)
+    } catch (err) {
+        console.log(err);
+    }
 }

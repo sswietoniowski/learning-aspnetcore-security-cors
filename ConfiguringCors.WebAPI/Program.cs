@@ -1,7 +1,14 @@
+using ConfiguringCors.Application;
+using ConfiguringCors.Application.Contracts.Infrastructure;
+using ConfiguringCors.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.ConfigureApplicationServices();
+builder.Services.AddScoped<IUserGenerator, BogusUserGenerator>();
+builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

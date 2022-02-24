@@ -7,6 +7,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfiguringCors.WebAPI", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfiguringCors.MVC", "ConfiguringCors.MVC\ConfiguringCors.MVC.csproj", "{9757428A-4B10-42A1-969D-028032730B76}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{C05F5585-78CF-4C69-B3E9-8906EA84ABC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{258F0E49-0EAC-48DB-B8F0-A71CC0A05D2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{64E3061F-B0F6-4C5B-A218-5A8A0B7A9F86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{59C857B6-92FE-41E8-BE77-0B9C6BDD8BC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfiguringCors.Domain", "ConfiguringCors.Domain\ConfiguringCors.Domain.csproj", "{D9F5DBCE-7D1A-4C10-B818-8DE34E873BA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfiguringCors.Application", "ConfiguringCors.Application\ConfiguringCors.Application.csproj", "{49C1E781-BD21-400C-B166-7E26312F1070}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfiguringCors.Infrastructure", "ConfiguringCors.Infrastructure\ConfiguringCors.Infrastructure.csproj", "{9A3E276D-97A3-4CC0-B440-A42423C1EC41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +35,28 @@ Global
 		{9757428A-4B10-42A1-969D-028032730B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9757428A-4B10-42A1-969D-028032730B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9757428A-4B10-42A1-969D-028032730B76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F5DBCE-7D1A-4C10-B818-8DE34E873BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F5DBCE-7D1A-4C10-B818-8DE34E873BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F5DBCE-7D1A-4C10-B818-8DE34E873BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F5DBCE-7D1A-4C10-B818-8DE34E873BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49C1E781-BD21-400C-B166-7E26312F1070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49C1E781-BD21-400C-B166-7E26312F1070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49C1E781-BD21-400C-B166-7E26312F1070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49C1E781-BD21-400C-B166-7E26312F1070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A3E276D-97A3-4CC0-B440-A42423C1EC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A3E276D-97A3-4CC0-B440-A42423C1EC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A3E276D-97A3-4CC0-B440-A42423C1EC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A3E276D-97A3-4CC0-B440-A42423C1EC41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{365A5320-FF62-4065-B040-40DC28C07CC7} = {C05F5585-78CF-4C69-B3E9-8906EA84ABC2}
+		{9757428A-4B10-42A1-969D-028032730B76} = {258F0E49-0EAC-48DB-B8F0-A71CC0A05D2D}
+		{D9F5DBCE-7D1A-4C10-B818-8DE34E873BA4} = {64E3061F-B0F6-4C5B-A218-5A8A0B7A9F86}
+		{49C1E781-BD21-400C-B166-7E26312F1070} = {64E3061F-B0F6-4C5B-A218-5A8A0B7A9F86}
+		{9A3E276D-97A3-4CC0-B440-A42423C1EC41} = {59C857B6-92FE-41E8-BE77-0B9C6BDD8BC7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {971D4CCA-09AB-4852-B798-ED73ADB31C36}
