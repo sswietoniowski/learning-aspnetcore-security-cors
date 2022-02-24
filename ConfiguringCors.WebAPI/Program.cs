@@ -2,6 +2,8 @@ using ConfiguringCors.Application;
 using ConfiguringCors.Application.Contracts.Infrastructure;
 using ConfiguringCors.Infrastructure;
 
+const double _PREFLIGH_IN_SECONDS = 30;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -31,7 +33,32 @@ builder.Services.AddCors(options => {
             .WithMethods("Get")
             .WithHeaders("Content-Type:");
     });
+    options.AddPolicy("WithSomeExtraOptions", builder =>
+    {
+        builder
+            .WithOrigins(allowedOrigins)
+            .SetIsOriginAllowedToAllowWildcardSubdomains()
+            .WithMethods("Get")
+            .AllowAnyHeader()
+            .SetPreflightMaxAge(TimeSpan.FromSeconds(_PREFLIGH_IN_SECONDS))
+            .AllowCredentials()
+            .WithExposedHeaders("PageNo", "PageSize", "PageCount", "PageTotalRecords");
+    });
+    options.AddPolicy("WithProgrammaticOriginCheck", builder =>
+    {
+        builder
+            .SetIsOriginAllowed(IsOriginAllowed)
+            .WithMethods("Get")
+            .AllowAnyHeader();
+    });
 });
+
+bool IsOriginAllowed(string host)
+{
+    var corsOriginAllowed = new[] { "localhost" };
+
+    return corsOriginAllowed.Any(origin => host.Contains(origin));
+}
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
