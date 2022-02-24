@@ -45,7 +45,16 @@ namespace ConfiguringCors.WebAPI.Controllers
 
         [HttpGet("cors-enabled-with-origins-methods-headers")]
         [EnableCors("WithOriginsMethodsdHeaders")]
-        public ActionResult<IEnumerable<UserDto>> CorsEnabledWithOriginsMethodsHeaders([FromQuery] int quantity = _DEFAULT_USERS_QUANTITY) => GetAll(quantity);
+        public ActionResult<IEnumerable<UserDto>> CorsEnabledWithOriginsMethodsHeaders([FromQuery] int quantity = _DEFAULT_USERS_QUANTITY)
+        {
+            int pageNo = 1;
+            int pageSize = 10;
+            int pageCount = 10;
+            int totalRecords = 100;
+            SetPaginationHeader(pageNo, pageSize, pageCount, totalRecords);
+
+            return GetAll(quantity);
+        }
 
         private void SetPaginationHeader(int pageSize, int pageNo, int pageCount, int pageTotalRecords)
         {
