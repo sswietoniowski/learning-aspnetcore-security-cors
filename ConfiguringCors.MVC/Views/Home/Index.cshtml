@@ -7,6 +7,8 @@
         <button class="btn btn-secondary" onclick="loadUsers('https://localhost:5003/Users/GetAll')">Load Users (SOP)</button>
         <button class="btn btn-secondary" onclick="loadUsers('https://localhost:5001/api/users/cors-disabled')">Load Users (CORS-Disabled)</button>
         <button class="btn btn-secondary" onclick="loadUsers('https://localhost:5001/api/users/cors-enabled-allow-any-origin')">Load Users (CORS-Enabled-AllowAnyOrigin)</button>
+        <button class="btn btn-secondary" onclick="loadUsers('https://localhost:5001/api/users/cors-enabled-with-origin')">Load Users (CORS-Enabled-WithOrigins)</button>
+        <button class="btn btn-secondary" onclick="loadUsers('https://localhost:5001/api/users/cors-enabled-with-origins-methods-headers')">Load Users (CORS-Enabled-WithOriginsMethodsHeaders)</button>
     </div>
     <br />
     <div class="card-group" id="users-list">

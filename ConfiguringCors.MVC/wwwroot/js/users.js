@@ -9,7 +9,7 @@ const createUsersList = (users) => {
         return `
 <div class="col col-md-3">
     <div class="card" style="width: 20rem;height: 30rem;">
-        <img src="https://dummyimage.com/350x250/000/fff.jpg&text=User" class="card-img-top" alt="${user.name} Photo"/>
+        <img src="https://dummyimage.com/350x250/000/fff.jpg&text=${user.name}" class="card-img-top" alt="${user.name} Photo"/>
         <div class="card-body">
             <h5 class="card-title">${user.name}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${user.userType}</h6>

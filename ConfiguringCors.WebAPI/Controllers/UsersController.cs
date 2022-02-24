@@ -30,8 +30,16 @@ namespace ConfiguringCors.WebAPI.Controllers
 
         [HttpGet("cors-disabled")]
         public ActionResult<IEnumerable<UserDto>> CorsDisabled([FromQuery] int quantity = _DEFAULT_USERS_QUANTITY) => GetAll(quantity);
+
         [HttpGet("cors-enabled-allow-any-origin")]
         [EnableCors("AllowAnyOrigin")] // can be applied to the whole controller too
-        public ActionResult<IEnumerable<UserDto>> CorsEnabled([FromQuery] int quantity = _DEFAULT_USERS_QUANTITY) => GetAll(quantity);
+        public ActionResult<IEnumerable<UserDto>> CorsEnabledAllowAnyOrigin([FromQuery] int quantity = _DEFAULT_USERS_QUANTITY) => GetAll(quantity);
+
+        [HttpGet("cors-enabled-with-origins")]
+        [EnableCors("WithOrigins")] // can be applied to the whole controller too
+        public ActionResult<IEnumerable<UserDto>> CorsEnabledWithOrigins([FromQuery] int quantity = _DEFAULT_USERS_QUANTITY) => GetAll(quantity);
+        [HttpGet("cors-enabled-with-origins-methods-headers")]
+        [EnableCors("WithOriginsMethodsdHeaders")] // can be applied to the whole controller too
+        public ActionResult<IEnumerable<UserDto>> CorsEnabledWithOriginsMethodsHeaders([FromQuery] int quantity = _DEFAULT_USERS_QUANTITY) => GetAll(quantity);
     }
 }
