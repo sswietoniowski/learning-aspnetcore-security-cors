@@ -12,7 +12,6 @@ builder.Services.ConfigureApplicationServices();
 builder.Services.AddScoped<IUserGenerator, BogusUserGenerator>();
 builder.Services.AddScoped<IUsersService, UsersService>();
 
-
 var allowedOrigins = builder.Configuration.GetValue<string>("Cors:AllowedOrigins")?.Split(",") ?? new string[0];
 builder.Services.AddCors(options => {
     options.AddPolicy("AllowAnyOrigin", builder =>
