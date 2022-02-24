@@ -8,12 +8,13 @@ namespace ConfiguringCors.Infrastructure
     {
         private const int _MIN_SCORING = 0;
         private const int _MAX_SCORING = 1000;
+        private const string _LOCALE = "pl";
 
         private Faker<User> _userFaker;
 
         public BogusUserGenerator()
         {
-            _userFaker = new Faker<User>(locale: "pl")
+            _userFaker = new Faker<User>(locale: _LOCALE)
                 .RuleFor(u => u.Id, f => Guid.NewGuid().ToString())
                 .RuleFor(u => u.FirstName, f => f.Person.FirstName)
                 .RuleFor(u => u.LastName, f => f.Person.LastName)
