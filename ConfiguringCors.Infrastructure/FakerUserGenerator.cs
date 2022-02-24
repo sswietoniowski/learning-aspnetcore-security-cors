@@ -18,7 +18,7 @@ namespace ConfiguringCors.Infrastructure
 
             user.FirstName = Faker.Name.First();
             user.LastName = Faker.Name.Last();
-            user.DomainName = Faker.Internet.DomainName();
+            user.Website = Faker.Internet.DomainName();
             user.Email = Faker.Internet.Email(user.Name);
             user.PhoneNumber = Faker.Phone.Number();
             user.Biography = String.Join(" ", Faker.Lorem.Sentence(_BIO_SENTENCES_COUNT));

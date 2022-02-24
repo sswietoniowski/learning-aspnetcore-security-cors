@@ -10,7 +10,7 @@ namespace ConfiguringCors.Domain
         public string Email { get; set; } = default!;
         public string PhoneNumber { get; set; } = default!;
         public string Biography { get; set; } = default!;
-        public string DomainName { get; set; } = default!;
+        public string Website { get; set; } = default!;
         public UserType UserType { get; set; } = default!;
         public int Scoring { get; set; } = default!;
     }

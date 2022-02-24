@@ -21,7 +21,7 @@ namespace ConfiguringCors.Infrastructure
                 .RuleFor(u => u.Email, f => f.Person.Email)
                 .RuleFor(u => u.PhoneNumber, f => f.Person.Phone)
                 .RuleFor(u => u.Biography, f => f.Lorem.Sentence())
-                .RuleFor(u => u.DomainName, f => f.Person.Website)
+                .RuleFor(u => u.Website, f => f.Internet.DomainName())
                 .RuleFor(u => u.UserType, f => f.PickRandom<UserType>())
                 .RuleFor(u => u.Scoring, f => f.Random.Int(_MIN_SCORING, _MAX_SCORING));
         }
