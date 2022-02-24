@@ -13,7 +13,7 @@ namespace ConfiguringCors.Infrastructure
 
         public BogusUserGenerator()
         {
-            _userFaker = new Faker<User>()
+            _userFaker = new Faker<User>(locale: "pl")
                 .RuleFor(u => u.Id, f => Guid.NewGuid().ToString())
                 .RuleFor(u => u.FirstName, f => f.Person.FirstName)
                 .RuleFor(u => u.LastName, f => f.Person.LastName)
